@@ -10,7 +10,7 @@ curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | tee /etc/a
 chmod 0644 /etc/apt/keyrings/jenkins.asc
 echo "deb [signed-by=/etc/apt/keyrings/jenkins.asc] https://pkg.jenkins.io/debian-stable binary/" > /etc/apt/sources.list.d/jenkins.list
 apt-get update -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y fontconfig openjdk-17-jre jenkins
+DEBIAN_FRONTEND=noninteractive apt-get install -y fontconfig openjdk-21-jre jenkins
 systemctl enable --now jenkins
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y docker.io
